@@ -1,9 +1,10 @@
-package com.herb.lib.mybatis.mapper;
+package com.herb.lib.mybatis.mapper.book;
 
 import com.herb.lib.api.model.book.BookClassDTO;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-
+@Mapper
 public interface BookClassMapper {
     /**
      * 根据名称模糊查询全部分类信息
