@@ -9,7 +9,7 @@ import lombok.Data;
 public class ResultDTO {
     private  String system;
 
-    private int code;
+    private Integer code;
 
     private String  msg;
 

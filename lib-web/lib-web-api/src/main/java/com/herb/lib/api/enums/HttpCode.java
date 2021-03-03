@@ -1,5 +1,8 @@
 package com.herb.lib.api.enums;
 
+/**
+ * Http响应code
+ */
 public enum HttpCode {
     /**
      * 成功且有数据
@@ -29,18 +32,5 @@ public enum HttpCode {
     public int getCode() {
         return code;
     }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
 
 }

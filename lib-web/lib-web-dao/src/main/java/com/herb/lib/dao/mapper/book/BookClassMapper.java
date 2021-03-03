@@ -1,4 +1,4 @@
-package com.herb.lib.mybatis.mapper.book;
+package com.herb.lib.dao.mapper.book;
 
 import com.herb.lib.api.model.book.BookClassDTO;
 import org.apache.ibatis.annotations.Mapper;

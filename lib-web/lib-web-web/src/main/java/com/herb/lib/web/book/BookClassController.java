@@ -1,4 +1,4 @@
-package com.herb.lib.book;
+package com.herb.lib.web.book;
 
 import com.herb.lib.api.constants.ResultDTO;
 import com.herb.lib.api.enums.HttpCode;
