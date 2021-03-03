@@ -13,16 +13,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.herb</groupId>
-            <artifactId>lib-web-dao</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.ibatis</groupId>
+            <artifactId>ibatis-core</artifactId>
+            <version>3.0</version>
+        </dependency>
     </dependencies>
+
+
 
 </project>

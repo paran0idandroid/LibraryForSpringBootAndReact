@@ -14,7 +14,8 @@ public enum HttpCode {
     /**
      * 系统异常
      */
-    ERROR(500, "系统异常");
+    ERROR(500, "系统异常"),
+    ;
 
     private int code;
 

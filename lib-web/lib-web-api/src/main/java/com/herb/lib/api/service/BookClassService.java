@@ -2,9 +2,8 @@ package com.herb.lib.api.service;
 
 import com.herb.lib.api.constants.ResultDTO;
 import com.herb.lib.api.model.book.BookClassDTO;
-import org.apache.ibatis.annotations.Mapper;
 
-import java.util.List;
+
 
 public interface BookClassService {
     /**
@@ -19,7 +18,7 @@ public interface BookClassService {
      * @param id 数据ID
      * @return 查找的数据集
      */
-    ResultDTO fingById(int id);
+    ResultDTO findById(int id);
 
     /**
      * 新增

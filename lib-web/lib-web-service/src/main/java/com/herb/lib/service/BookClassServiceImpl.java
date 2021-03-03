@@ -5,6 +5,9 @@ import com.herb.lib.api.enums.HttpCode;
 import com.herb.lib.api.model.book.BookClassDTO;
 import com.herb.lib.api.service.BookClassService;
 import com.herb.lib.mybatis.mapper.book.BookClassMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -17,13 +20,16 @@ import java.util.List;
  * 书籍分类Service实现类
  */
 @Service
+@Mapper
 public class BookClassServiceImpl implements BookClassService {
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private BookClassMapper bookClassMapper;
 
     @Override
     public ResultDTO findListByName(String name) {
+        logger.info("入参：" + name);
         //非空判断
         if(StringUtils.isEmpty(name)){
             return new ResultDTO(HttpCode.FAIL.getCode(),"搜索关键字不能为空");
@@ -31,31 +37,35 @@ public class BookClassServiceImpl implements BookClassService {
 
         //业务查找
         List<BookClassDTO> list = bookClassMapper.findListByName(name);
+        logger.info("出参：" + list);
         if(CollectionUtils.isEmpty(list)){
             return new ResultDTO(HttpCode.FAIL.getCode(), "暂无对应分类数据");
         }
+
 
         return new ResultDTO(HttpCode.SUCCESS.getCode(), "查找成功", list);
 
     }
 
     @Override
-    public ResultDTO fingById(int id) {
+    public ResultDTO findById(int id) {
+        logger.info("入参：" + id);
         //非空判断
         if(0 == id){
             return new ResultDTO(HttpCode.FAIL.getCode(),"数据ID不能为空");
         }
         //业务查找
-        BookClassDTO bookClassDTO = bookClassMapper.fingById(id);
+        BookClassDTO bookClassDTO = bookClassMapper.findById(id);
         if(null == bookClassDTO){
             return new ResultDTO(HttpCode.FAIL.getCode(),"暂无分类数据");
         }
-
+        logger.info("出参：" + bookClassDTO);
         return new ResultDTO(HttpCode.SUCCESS.getCode(), "查找成功", bookClassDTO);
     }
 
     @Override
     public ResultDTO insert(BookClassDTO entity) {
+        logger.info("入参：" + entity);
         //非空判断
         if(StringUtils.isEmpty(entity.getName())){
             return new ResultDTO(HttpCode.FAIL.getCode(), "分类名称不能为空");
@@ -71,6 +81,7 @@ public class BookClassServiceImpl implements BookClassService {
 
     @Override
     public ResultDTO update(BookClassDTO entity) {
+        logger.info("入参：" + entity);
         //非空判断
         if(StringUtils.isEmpty(entity.getId())){
             return new ResultDTO(HttpCode.FAIL.getCode(), "数据ID不能为空");
@@ -86,6 +97,7 @@ public class BookClassServiceImpl implements BookClassService {
 
     @Override
     public ResultDTO delete(int id) {
+        logger.info("入参：" + id);
         //非空判断
         if(id == 0){
             return new ResultDTO(HttpCode.FAIL.getCode(), "数据ID不能为空");

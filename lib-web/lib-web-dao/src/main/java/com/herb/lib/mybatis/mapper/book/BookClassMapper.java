@@ -2,10 +2,14 @@ package com.herb.lib.mybatis.mapper.book;
 
 import com.herb.lib.api.model.book.BookClassDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 @Mapper
-public interface BookClassMapper {
+@Service
+
+public interface BookClassMapper{
     /**
      * 根据名称模糊查询全部分类信息
      * @param name 分类名称
@@ -18,7 +22,7 @@ public interface BookClassMapper {
      * @param id 数据ID
      * @return 查找的数据集
      */
-    BookClassDTO fingById(int id);
+    BookClassDTO findById(int id);
 
     /**
      * 新增
