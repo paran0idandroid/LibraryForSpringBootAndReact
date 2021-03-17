@@ -54,5 +54,23 @@ public class BaseDTO{
         this.updateDate = updateDate;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setTmp1(String tmp1) {
+        this.tmp1 = tmp1;
+    }
+
+    public void setTmp2(String tmp2) {
+        this.tmp2 = tmp2;
+    }
+
+    public String getTmp1() {
+        return tmp1;
+    }
+
+    public String getTmp2() {
+        return tmp2;
+    }
 }
