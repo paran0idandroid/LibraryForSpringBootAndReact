@@ -98,5 +98,39 @@ public class BookBorrowDTO extends BaseDTO {
         this.tradeFee = tradeFee;
     }
 
+    public int getUserId() {
+        return userId;
+    }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public BigDecimal getTradeFee() {
+        return tradeFee;
+    }
 }
