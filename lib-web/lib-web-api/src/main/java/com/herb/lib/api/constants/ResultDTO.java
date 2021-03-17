@@ -7,7 +7,7 @@ import lombok.Data;
  */
 @Data
 public class ResultDTO {
-    private  String system;
+    private String system;
 
     private Integer code;
 

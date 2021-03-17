@@ -27,12 +27,17 @@ public class BookDTO extends BaseDTO implements Serializable {
     /**
      * 书籍分类名称
      */
-    private  int bookClassId;
+    private int bookClassId;
 
     /**
      * 书籍价格
      */
     private BigDecimal bookPrice;
+
+    /**
+     * 书籍数量
+     */
+    private int bookCount;
 
     /**
      * 书籍出版社
@@ -53,4 +58,44 @@ public class BookDTO extends BaseDTO implements Serializable {
      * 出版日期
      */
     private Date publishDate;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public int getBookClassId() {
+        return bookClassId;
+    }
+
+    public BigDecimal getBookPrice() {
+        return bookPrice;
+    }
+
+    public String getBookPublish() {
+        return bookPublish;
+    }
+
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public String getBookImg() {
+        return bookImg;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public int getBookCount() {
+        return bookCount;
+    }
+
+    public void setBookCount(int bookCount) {
+        this.bookCount = bookCount;
+    }
 }

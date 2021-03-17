@@ -1,42 +1,48 @@
 package com.herb.lib.dao.mapper.book;
 
-import com.herb.lib.api.model.book.BookClassDTO;
+
+import com.herb.lib.api.model.book.BookDTO;
 import org.apache.ibatis.annotations.Mapper;
 
-
-
 import java.util.List;
+
+/**
+ * 书籍实体信息接口
+ * @author 罗海强
+ * @version 1.0
+ * @date 2021/3/4 20:08
+ */
 @Mapper
+public interface BookMapper {
 
 
-public interface BookClassMapper{
     /**
-     * 根据名称模糊查询全部分类信息
+     * 根据名称模糊查询全部书籍信息
      * @param name 分类名称
      * @return 匹配的数据集
      */
-    List<BookClassDTO> findListByName(String name);
+    List<BookDTO> findListByName(String name);
 
     /**
      * 根据ID查找数据
      * @param id 数据ID
      * @return 查找的数据集
      */
-    BookClassDTO findById(int id);
+    BookDTO findById(int id);
 
     /**
      * 新增
      * @param entity 实体类（不包含ID）
      * @return 影响行数
      */
-    int insert(BookClassDTO entity);
+    int insert(BookDTO entity);
 
     /**
      * 更新
      * @param entity 实体类（不包含ID）
      * @return 影响行数
      */
-    int update(BookClassDTO entity);
+    int update(BookDTO entity);
 
     /**
      * 删除

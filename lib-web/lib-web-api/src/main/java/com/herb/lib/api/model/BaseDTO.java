@@ -35,8 +35,24 @@ public class BaseDTO{
      */
     private Date updateDate;
 
+
+
     /**
      * 数据有效性
      */
     private ValidFlagEnum validFlag;
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public void setValidFlag(ValidFlagEnum validFlag) {
+        this.validFlag = validFlag;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
+
 }

@@ -24,4 +24,6 @@ public class BookClassDTO extends BaseDTO implements Serializable {
     public int getId() {
         return id;
     }
+
+
 }

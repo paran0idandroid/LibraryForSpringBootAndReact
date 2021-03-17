@@ -1,13 +1,17 @@
-package com.herb.lib.api.service;
+package com.herb.lib.api.service.book;
 
 import com.herb.lib.api.constants.ResultDTO;
-import com.herb.lib.api.model.book.BookClassDTO;
+import com.herb.lib.api.model.book.BookDTO;
 
+/**
+ * @author 罗海强
+ * @version 1.0
+ * @date 2021/3/4 20:18
+ */
+public interface BookService {
 
-
-public interface BookClassService {
     /**
-     * 根据名称模糊查询全部分类信息
+     * 根据名称模糊查询全部书籍信息
      * @param name 分类名称
      * @return 匹配的数据集
      */
@@ -25,14 +29,14 @@ public interface BookClassService {
      * @param entity 实体类（不包含ID）
      * @return 影响行数
      */
-    ResultDTO insert(BookClassDTO entity);
+    ResultDTO insert(BookDTO entity);
 
     /**
      * 更新
      * @param entity 实体类（不包含ID）
      * @return 影响行数
      */
-    ResultDTO update(BookClassDTO entity);
+    ResultDTO update(BookDTO entity);
 
     /**
      * 删除
@@ -40,6 +44,4 @@ public interface BookClassService {
      * @return 影响行数
      */
     ResultDTO delete(int id);
-
-
 }
